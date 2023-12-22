@@ -1,0 +1,382 @@
+[0m18:47:24.789191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103078650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105aa5810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105aa6590>]}
+
+
+============================== 18:47:24.791999 | fc2b1da1-1ed5-4202-a59f-88f60ad15dff ==============================
+[0m18:47:24.791999 [info ] [MainThread]: Running with dbt=1.7.2
+[0m18:47:24.792327 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/saloni.jain/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:47:24.792706 [info ] [MainThread]: dbt version: 1.7.2
+[0m18:47:24.792881 [info ] [MainThread]: python version: 3.11.4
+[0m18:47:24.793050 [info ] [MainThread]: python path: /Users/saloni.jain/repos/dbt-quickstart/venv/bin/python3.11
+[0m18:47:24.793204 [info ] [MainThread]: os info: macOS-14.0-arm64-arm-64bit
+[0m18:47:24.972596 [info ] [MainThread]: Using profiles dir at /Users/saloni.jain/.dbt
+[0m18:47:24.972918 [info ] [MainThread]: Using profiles.yml file at /Users/saloni.jain/.dbt/profiles.yml
+[0m18:47:24.973100 [info ] [MainThread]: Using dbt_project.yml file at /Users/saloni.jain/repos/dbt-quickstart/dbt_project.yml
+[0m18:47:24.973611 [info ] [MainThread]: adapter type: snowflake
+[0m18:47:24.973816 [info ] [MainThread]: adapter version: 1.7.0
+[0m18:47:24.973994 [info ] [MainThread]: Configuration:
+[0m18:47:24.974141 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:47:24.974279 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m18:47:24.974432 [info ] [MainThread]: Required dependencies:
+[0m18:47:24.974641 [debug] [MainThread]: Executing "git --help"
+[0m18:47:24.991949 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m18:47:24.992514 [debug] [MainThread]: STDERR: "b''"
+[0m18:47:24.992761 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:47:24.992960 [info ] [MainThread]: Connection:
+[0m18:47:24.993154 [info ] [MainThread]:   account: hwwphya-yl32657
+[0m18:47:24.993306 [info ] [MainThread]:   user: salonijain
+[0m18:47:24.993448 [info ] [MainThread]:   database: Transforming
+[0m18:47:24.993582 [info ] [MainThread]:   warehouse: raw
+[0m18:47:24.993716 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m18:47:24.993846 [info ] [MainThread]:   schema: jaffle_shop
+[0m18:47:24.994053 [info ] [MainThread]:   authenticator: None
+[0m18:47:24.994309 [info ] [MainThread]:   private_key_path: None
+[0m18:47:24.994470 [info ] [MainThread]:   token: None
+[0m18:47:24.994621 [info ] [MainThread]:   oauth_client_id: None
+[0m18:47:24.994764 [info ] [MainThread]:   query_tag: saloni
+[0m18:47:24.994901 [info ] [MainThread]:   client_session_keep_alive: False
+[0m18:47:24.995040 [info ] [MainThread]:   host: None
+[0m18:47:24.995270 [info ] [MainThread]:   port: None
+[0m18:47:24.995487 [info ] [MainThread]:   proxy_host: None
+[0m18:47:24.995638 [info ] [MainThread]:   proxy_port: None
+[0m18:47:24.995780 [info ] [MainThread]:   protocol: None
+[0m18:47:24.995915 [info ] [MainThread]:   connect_retries: 1
+[0m18:47:24.996050 [info ] [MainThread]:   connect_timeout: None
+[0m18:47:24.996188 [info ] [MainThread]:   retry_on_database_errors: False
+[0m18:47:24.996321 [info ] [MainThread]:   retry_all: False
+[0m18:47:24.996450 [info ] [MainThread]:   insecure_mode: False
+[0m18:47:24.996582 [info ] [MainThread]:   reuse_connections: None
+[0m18:47:24.996895 [info ] [MainThread]: Registered adapter: snowflake=1.7.0
+[0m18:47:25.635577 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m18:47:25.639993 [debug] [MainThread]: Using snowflake connection "debug"
+[0m18:47:25.640383 [debug] [MainThread]: On debug: select 1 as id
+[0m18:47:25.640652 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:47:27.897692 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m18:47:27.899874 [debug] [MainThread]: On debug: Close
+[0m18:47:28.164934 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m18:47:28.165724 [info ] [MainThread]: [31m1 check failed:[0m
+[0m18:47:28.166249 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/saloni.jain/repos/dbt-quickstart/dbt_project.yml> not found
+
+[0m18:47:28.528967 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 3.7760663, "process_user_time": 1.280546, "process_kernel_time": 0.267787, "process_mem_max_rss": "141656064", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:47:28.530076 [debug] [MainThread]: Command `dbt debug` failed at 18:47:28.529808 after 3.78 seconds
+[0m18:47:28.530923 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m18:47:28.531652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105433c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063c2910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105aea250>]}
+[0m18:47:28.532299 [debug] [MainThread]: Flushing usage events
+[0m18:52:38.503443 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1121fb050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1131fa210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113127610>]}
+
+
+============================== 18:52:38.506621 | e76f0db5-76d7-4493-84f9-b43ab6c5e2d2 ==============================
+[0m18:52:38.506621 [info ] [MainThread]: Running with dbt=1.7.2
+[0m18:52:38.507019 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': '/Users/saloni.jain/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m18:52:38.507478 [info ] [MainThread]: dbt version: 1.7.2
+[0m18:52:38.507673 [info ] [MainThread]: python version: 3.11.4
+[0m18:52:38.507855 [info ] [MainThread]: python path: /Users/saloni.jain/repos/dbt-quickstart/venv/bin/python3.11
+[0m18:52:38.508014 [info ] [MainThread]: os info: macOS-14.0-arm64-arm-64bit
+[0m18:52:38.671124 [info ] [MainThread]: Using profiles dir at /Users/saloni.jain/.dbt
+[0m18:52:38.671505 [info ] [MainThread]: Using profiles.yml file at /Users/saloni.jain/.dbt/profiles.yml
+[0m18:52:38.671675 [info ] [MainThread]: Using dbt_project.yml file at /Users/saloni.jain/repos/dbt-quickstart/dbt_project.yml
+[0m18:52:38.672217 [info ] [MainThread]: adapter type: snowflake
+[0m18:52:38.672433 [info ] [MainThread]: adapter version: 1.7.0
+[0m18:52:38.672609 [info ] [MainThread]: Configuration:
+[0m18:52:38.672760 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:52:38.672902 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m18:52:38.673052 [info ] [MainThread]: Required dependencies:
+[0m18:52:38.673246 [debug] [MainThread]: Executing "git --help"
+[0m18:52:38.697417 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m18:52:38.697979 [debug] [MainThread]: STDERR: "b''"
+[0m18:52:38.698194 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:52:38.698369 [info ] [MainThread]: Connection:
+[0m18:52:38.698566 [info ] [MainThread]:   account: hwwphya-yl32657
+[0m18:52:38.698709 [info ] [MainThread]:   user: salonijain
+[0m18:52:38.698849 [info ] [MainThread]:   database: Transforming
+[0m18:52:38.698981 [info ] [MainThread]:   warehouse: raw
+[0m18:52:38.699113 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m18:52:38.699242 [info ] [MainThread]:   schema: jaffle_shop
+[0m18:52:38.699374 [info ] [MainThread]:   authenticator: None
+[0m18:52:38.699510 [info ] [MainThread]:   private_key_path: None
+[0m18:52:38.699641 [info ] [MainThread]:   token: None
+[0m18:52:38.699777 [info ] [MainThread]:   oauth_client_id: None
+[0m18:52:38.699906 [info ] [MainThread]:   query_tag: saloni
+[0m18:52:38.700035 [info ] [MainThread]:   client_session_keep_alive: False
+[0m18:52:38.700168 [info ] [MainThread]:   host: None
+[0m18:52:38.700300 [info ] [MainThread]:   port: None
+[0m18:52:38.700429 [info ] [MainThread]:   proxy_host: None
+[0m18:52:38.700559 [info ] [MainThread]:   proxy_port: None
+[0m18:52:38.700685 [info ] [MainThread]:   protocol: None
+[0m18:52:38.700813 [info ] [MainThread]:   connect_retries: 1
+[0m18:52:38.700941 [info ] [MainThread]:   connect_timeout: None
+[0m18:52:38.701068 [info ] [MainThread]:   retry_on_database_errors: False
+[0m18:52:38.701262 [info ] [MainThread]:   retry_all: False
+[0m18:52:38.701452 [info ] [MainThread]:   insecure_mode: False
+[0m18:52:38.701590 [info ] [MainThread]:   reuse_connections: None
+[0m18:52:38.701935 [info ] [MainThread]: Registered adapter: snowflake=1.7.0
+[0m18:52:38.707868 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m18:52:38.711655 [debug] [MainThread]: Using snowflake connection "debug"
+[0m18:52:38.712065 [debug] [MainThread]: On debug: select 1 as id
+[0m18:52:38.712239 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:52:40.248565 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m18:52:40.250224 [debug] [MainThread]: On debug: Close
+[0m18:52:40.455546 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m18:52:40.456424 [info ] [MainThread]: [31m1 check failed:[0m
+[0m18:52:40.456944 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/saloni.jain/repos/dbt-quickstart/dbt_project.yml> not found
+
+[0m18:52:40.461227 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 1.9944993, "process_user_time": 1.18545, "process_kernel_time": 0.238489, "process_mem_max_rss": "141033472", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:52:40.461733 [debug] [MainThread]: Command `dbt debug` failed at 18:52:40.461629 after 2.00 seconds
+[0m18:52:40.462070 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m18:52:40.462353 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113981850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113293550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11321ec50>]}
+[0m18:52:40.462752 [debug] [MainThread]: Flushing usage events
+[0m18:53:11.236409 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11480cb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114a5f690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114a5f1d0>]}
+
+
+============================== 18:53:11.240638 | 920249ec-7e8a-4ce7-921d-aebada96be5d ==============================
+[0m18:53:11.240638 [info ] [MainThread]: Running with dbt=1.7.2
+[0m18:53:11.241103 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/saloni.jain/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/Users/saloni.jain/repos/dbt-quickstart/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt debug', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:53:11.241492 [info ] [MainThread]: dbt version: 1.7.2
+[0m18:53:11.241679 [info ] [MainThread]: python version: 3.11.4
+[0m18:53:11.241854 [info ] [MainThread]: python path: /Users/saloni.jain/repos/dbt-quickstart/venv/bin/python3.11
+[0m18:53:11.242011 [info ] [MainThread]: os info: macOS-14.0-arm64-arm-64bit
+[0m18:53:11.409022 [info ] [MainThread]: Using profiles dir at /Users/saloni.jain/.dbt
+[0m18:53:11.409360 [info ] [MainThread]: Using profiles.yml file at /Users/saloni.jain/.dbt/profiles.yml
+[0m18:53:11.409522 [info ] [MainThread]: Using dbt_project.yml file at /Users/saloni.jain/repos/dbt-quickstart/dbt_project.yml
+[0m18:53:11.410013 [info ] [MainThread]: adapter type: snowflake
+[0m18:53:11.410209 [info ] [MainThread]: adapter version: 1.7.0
+[0m18:53:11.481706 [info ] [MainThread]: Configuration:
+[0m18:53:11.482035 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:53:11.482203 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m18:53:11.482407 [info ] [MainThread]: Required dependencies:
+[0m18:53:11.482633 [debug] [MainThread]: Executing "git --help"
+[0m18:53:11.501421 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m18:53:11.502054 [debug] [MainThread]: STDERR: "b''"
+[0m18:53:11.502280 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:53:11.502469 [info ] [MainThread]: Connection:
+[0m18:53:11.502678 [info ] [MainThread]:   account: hwwphya-yl32657
+[0m18:53:11.502823 [info ] [MainThread]:   user: salonijain
+[0m18:53:11.503004 [info ] [MainThread]:   database: Transforming
+[0m18:53:11.503243 [info ] [MainThread]:   warehouse: raw
+[0m18:53:11.503405 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m18:53:11.503555 [info ] [MainThread]:   schema: jaffle_shop
+[0m18:53:11.503708 [info ] [MainThread]:   authenticator: None
+[0m18:53:11.503889 [info ] [MainThread]:   private_key_path: None
+[0m18:53:11.504038 [info ] [MainThread]:   token: None
+[0m18:53:11.504179 [info ] [MainThread]:   oauth_client_id: None
+[0m18:53:11.504313 [info ] [MainThread]:   query_tag: saloni
+[0m18:53:11.504447 [info ] [MainThread]:   client_session_keep_alive: False
+[0m18:53:11.504578 [info ] [MainThread]:   host: None
+[0m18:53:11.504713 [info ] [MainThread]:   port: None
+[0m18:53:11.504841 [info ] [MainThread]:   proxy_host: None
+[0m18:53:11.504968 [info ] [MainThread]:   proxy_port: None
+[0m18:53:11.505102 [info ] [MainThread]:   protocol: None
+[0m18:53:11.505242 [info ] [MainThread]:   connect_retries: 1
+[0m18:53:11.505371 [info ] [MainThread]:   connect_timeout: None
+[0m18:53:11.505499 [info ] [MainThread]:   retry_on_database_errors: False
+[0m18:53:11.505627 [info ] [MainThread]:   retry_all: False
+[0m18:53:11.505755 [info ] [MainThread]:   insecure_mode: False
+[0m18:53:11.505880 [info ] [MainThread]:   reuse_connections: None
+[0m18:53:11.506138 [info ] [MainThread]: Registered adapter: snowflake=1.7.0
+[0m18:53:11.510946 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m18:53:11.511915 [debug] [MainThread]: Using snowflake connection "debug"
+[0m18:53:11.512085 [debug] [MainThread]: On debug: select 1 as id
+[0m18:53:11.512253 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:53:12.485819 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m18:53:12.488578 [debug] [MainThread]: On debug: Close
+[0m18:53:12.761591 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m18:53:12.762488 [info ] [MainThread]: [32mAll checks passed![0m
+[0m18:53:12.767086 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 1.5681443, "process_user_time": 1.223055, "process_kernel_time": 0.23971, "process_mem_max_rss": "141295616", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:53:12.767589 [debug] [MainThread]: Command `dbt debug` succeeded at 18:53:12.767494 after 1.57 seconds
+[0m18:53:12.767860 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m18:53:12.768109 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11446f890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1147e1b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114802350>]}
+[0m18:53:12.768403 [debug] [MainThread]: Flushing usage events
+[0m12:41:21.978601 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b9c210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10982f050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109803610>]}
+
+
+============================== 12:41:21.981360 | 9625ebcb-f33d-4925-8e91-fc5b6f02ce5d ==============================
+[0m12:41:21.981360 [info ] [MainThread]: Running with dbt=1.7.2
+[0m12:41:21.981682 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/saloni.jain/repos/dbt-quickstart/logs', 'version_check': 'True', 'profiles_dir': '/Users/saloni.jain/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m12:41:21.982933 [info ] [MainThread]: Setting up your profile.
+[0m12:42:45.224784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110e68a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110e69950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1112bf110>]}
+
+
+============================== 12:42:45.227512 | 0f4e5539-3618-4197-baea-129da720cb8d ==============================
+[0m12:42:45.227512 [info ] [MainThread]: Running with dbt=1.7.2
+[0m12:42:45.227852 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/saloni.jain/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/saloni.jain/repos/dbt-quickstart/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
+[0m12:42:45.229064 [info ] [MainThread]: Setting up your profile.
+[0m12:42:48.081890 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 2.889311, "process_user_time": 0.832648, "process_kernel_time": 0.133752, "process_mem_max_rss": "112967680", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:42:48.083290 [debug] [MainThread]: Command `dbt init` succeeded at 12:42:48.083007 after 2.89 seconds
+[0m12:42:48.084082 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1113c9310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10302a790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1112d2150>]}
+[0m12:42:48.084846 [debug] [MainThread]: Flushing usage events
+[0m12:43:45.642684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a66610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106573f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106392910>]}
+
+
+============================== 12:43:45.645579 | a83d06ba-36c7-4adc-98fc-56b8eb332209 ==============================
+[0m12:43:45.645579 [info ] [MainThread]: Running with dbt=1.7.2
+[0m12:43:45.645898 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': '/Users/saloni.jain/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m12:44:10.187414 [debug] [MainThread]: Starter project path: /Users/saloni.jain/repos/dbt-quickstart/venv/lib/python3.11/site-packages/dbt/include/starter_project
+[0m12:44:10.202913 [info ] [MainThread]: 
+Your new dbt project "Analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:44:10.203614 [info ] [MainThread]: Setting up your profile.
+[0m12:45:19.494289 [info ] [MainThread]: Profile Analytics written to /Users/saloni.jain/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:45:19.498303 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 93.888054, "process_user_time": 0.952779, "process_kernel_time": 0.18373, "process_mem_max_rss": "129662976", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:45:19.499377 [debug] [MainThread]: Command `dbt init` succeeded at 12:45:19.499150 after 93.89 seconds
+[0m12:45:19.499961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063903d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1062cbf10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1062ef410>]}
+[0m12:45:19.500557 [debug] [MainThread]: Flushing usage events
+[0m12:45:31.458787 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111250e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111233b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111232bd0>]}
+
+
+============================== 12:45:31.461423 | 6e7b8b35-8ede-4c04-931e-f619d32618eb ==============================
+[0m12:45:31.461423 [info ] [MainThread]: Running with dbt=1.7.2
+[0m12:45:31.461762 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/saloni.jain/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:45:31.462225 [info ] [MainThread]: dbt version: 1.7.2
+[0m12:45:31.462433 [info ] [MainThread]: python version: 3.11.4
+[0m12:45:31.462656 [info ] [MainThread]: python path: /Users/saloni.jain/repos/dbt-quickstart/venv/bin/python3.11
+[0m12:45:31.462835 [info ] [MainThread]: os info: macOS-14.0-arm64-arm-64bit
+[0m12:45:31.595727 [info ] [MainThread]: Using profiles dir at /Users/saloni.jain/.dbt
+[0m12:45:31.595984 [info ] [MainThread]: Using profiles.yml file at /Users/saloni.jain/.dbt/profiles.yml
+[0m12:45:31.596140 [info ] [MainThread]: Using dbt_project.yml file at /Users/saloni.jain/repos/dbt-quickstart/dbt_project.yml
+[0m12:45:31.596383 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m12:45:31.597406 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.16929829, "process_user_time": 0.93168, "process_kernel_time": 0.149676, "process_mem_max_rss": "129220608", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:45:31.597720 [debug] [MainThread]: Command `dbt debug` failed at 12:45:31.597658 after 0.17 seconds
+[0m12:45:31.597910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110a8fa90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110ced390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1109ca510>]}
+[0m12:45:31.598097 [debug] [MainThread]: Flushing usage events
+[0m14:09:22.504636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105776e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10513ba10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051d3c50>]}
+
+
+============================== 14:09:22.507474 | cf6d3a85-9d02-4efc-ba72-b5a5051a4033 ==============================
+[0m14:09:22.507474 [info ] [MainThread]: Running with dbt=1.7.2
+[0m14:09:22.507808 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/Users/saloni.jain/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m14:09:22.508153 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/saloni.jain/repos/dbt-quickstart/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m14:09:22.510220 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.036064293, "process_user_time": 0.859582, "process_kernel_time": 0.1337, "process_mem_max_rss": "114688000", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m14:09:22.510672 [debug] [MainThread]: Command `dbt run` failed at 14:09:22.510593 after 0.04 seconds
+[0m14:09:22.510902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10515eb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105139c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10579d250>]}
+[0m14:09:22.511128 [debug] [MainThread]: Flushing usage events
+[0m17:57:15.321444 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066ce450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067749d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106774450>]}
+
+
+============================== 17:57:15.324256 | 84cb549e-c0d1-44bc-826f-f553a8ca71a3 ==============================
+[0m17:57:15.324256 [info ] [MainThread]: Running with dbt=1.7.2
+[0m17:57:15.324647 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/saloni.jain/.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --select +dim_customers', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:57:15.325037 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/saloni.jain/repos/dbt-quickstart/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:57:15.326538 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.03646475, "process_user_time": 0.838522, "process_kernel_time": 0.139532, "process_mem_max_rss": "113770496", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:57:15.326908 [debug] [MainThread]: Command `dbt run` failed at 17:57:15.326836 after 0.04 seconds
+[0m17:57:15.327139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d524d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1064ac290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066e0c90>]}
+[0m17:57:15.327363 [debug] [MainThread]: Flushing usage events
+[0m13:04:39.429872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109063c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108d32a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108d0e510>]}
+
+
+============================== 13:04:39.432692 | 3253fc6e-f220-4b2c-a9f8-d283526354ae ==============================
+[0m13:04:39.432692 [info ] [MainThread]: Running with dbt=1.7.2
+[0m13:04:39.433069 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/saloni.jain/.dbt', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt deps', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:04:39.433630 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/saloni.jain/repos/dbt-quickstart/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:04:39.435271 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_wall_clock_time": 0.038247, "process_user_time": 0.842612, "process_kernel_time": 0.13837, "process_mem_max_rss": "114180096", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:04:39.435759 [debug] [MainThread]: Command `dbt deps` failed at 13:04:39.435665 after 0.04 seconds
+[0m13:04:39.436053 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108dcfbd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109342610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109343f10>]}
+[0m13:04:39.436311 [debug] [MainThread]: Flushing usage events
+[0m13:05:50.711760 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b934d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058ce5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058cf350>]}
+
+
+============================== 13:05:50.714685 | ddbe1d92-9fa3-45dd-8b16-0e60b4b25f79 ==============================
+[0m13:05:50.714685 [info ] [MainThread]: Running with dbt=1.7.2
+[0m13:05:50.715016 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/saloni.jain/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt deps', 'send_anonymous_usage_stats': 'True'}
+[0m13:05:50.715554 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/saloni.jain/repos/dbt-quickstart/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:05:50.717649 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_wall_clock_time": 0.034357168, "process_user_time": 0.849056, "process_kernel_time": 0.126263, "process_mem_max_rss": "115064832", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:05:50.718098 [debug] [MainThread]: Command `dbt deps` failed at 13:05:50.718015 after 0.03 seconds
+[0m13:05:50.718361 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1058f6b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1059711d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105bbef10>]}
+[0m13:05:50.718641 [debug] [MainThread]: Flushing usage events
+[0m13:10:33.495117 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074a7450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070eae50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070ea210>]}
+
+
+============================== 13:10:33.497451 | a93a5206-b4dc-4b43-b1e8-6b7c555cd8e8 ==============================
+[0m13:10:33.497451 [info ] [MainThread]: Running with dbt=1.7.2
+[0m13:10:33.497778 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/saloni.jain/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt deps', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:10:33.498328 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/saloni.jain/repos/dbt-quickstart/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:10:33.499383 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_wall_clock_time": 0.03395225, "process_user_time": 0.832677, "process_kernel_time": 0.117469, "process_mem_max_rss": "114556928", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:10:33.499781 [debug] [MainThread]: Command `dbt deps` failed at 13:10:33.499708 after 0.03 seconds
+[0m13:10:33.500022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106df2650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107102b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1071867d0>]}
+[0m13:10:33.500254 [debug] [MainThread]: Flushing usage events
+[0m13:11:10.707758 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e72d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109bf6e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109acef50>]}
+
+
+============================== 13:11:10.710153 | a90d924e-3fe7-4b09-afd6-bb84eb43e742 ==============================
+[0m13:11:10.710153 [info ] [MainThread]: Running with dbt=1.7.2
+[0m13:11:10.710527 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/saloni.jain/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt deps', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:11:10.711084 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/saloni.jain/repos/dbt-quickstart/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:11:10.712047 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_wall_clock_time": 0.03360796, "process_user_time": 0.84233, "process_kernel_time": 0.120397, "process_mem_max_rss": "115212288", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:11:10.712376 [debug] [MainThread]: Command `dbt deps` failed at 13:11:10.712305 after 0.03 seconds
+[0m13:11:10.712587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10985ec10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ec1c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109833b90>]}
+[0m13:11:10.712785 [debug] [MainThread]: Flushing usage events
+[0m13:16:10.762682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aa57a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f17b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ecad90>]}
+
+
+============================== 13:16:10.765584 | 6f8d4075-cf3f-4f6a-b616-87f923a4ed34 ==============================
+[0m13:16:10.765584 [info ] [MainThread]: Running with dbt=1.7.2
+[0m13:16:10.765966 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/saloni.jain/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt deps', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:16:10.766503 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/saloni.jain/repos/dbt-quickstart/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:16:10.767931 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_wall_clock_time": 0.035331126, "process_user_time": 0.841503, "process_kernel_time": 0.139761, "process_mem_max_rss": "114278400", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:16:10.768253 [debug] [MainThread]: Command `dbt deps` failed at 13:16:10.768185 after 0.04 seconds
+[0m13:16:10.768469 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ecb890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ae77fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f9ab50>]}
+[0m13:16:10.768676 [debug] [MainThread]: Flushing usage events
+[0m13:21:56.485910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10732a5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1095081d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1094866d0>]}
+
+
+============================== 13:21:56.488851 | fb1c732f-792a-4a95-87bf-e60ebe8335e0 ==============================
+[0m13:21:56.488851 [info ] [MainThread]: Running with dbt=1.7.2
+[0m13:21:56.489222 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/saloni.jain/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt deps', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:21:56.489836 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/saloni.jain/repos/dbt-quickstart/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:21:56.491341 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_wall_clock_time": 0.035862457, "process_user_time": 0.833527, "process_kernel_time": 0.129928, "process_mem_max_rss": "113983488", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:21:56.491728 [debug] [MainThread]: Command `dbt deps` failed at 13:21:56.491645 after 0.04 seconds
+[0m13:21:56.491984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10953e110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10972e150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10975a290>]}
+[0m13:21:56.492215 [debug] [MainThread]: Flushing usage events
