@@ -1,6 +1,6 @@
 packages:
 - package: dbt-labs/dbt_utils
   version: 1.1.1
-- package: dbt-labs/snowplow
-  version: 0.15.1
-sha1_hash: f4afaae07a3b1f8c142a7dfc10dba7fe72791904
+- package: tnightengale/dbt_meta_testing
+  version: 0.3.6
+sha1_hash: 0a7ff947790dc00da99fded8e338e59c541f2984
